@@ -6,7 +6,7 @@
 
 Being able to use both, git and GitHub, is an important skill every software/data engineer must possess. This is even more important when it comes to its ability to handle code in collaborative projects. This lab will help you learn how use it. This lab will help you learn how to use it and understand its importance better.
 
-## Instructions
+## Tips
 
 1. First of all, install git if you don't have it yet, and create a GitHub account. (_In case you haven't made it to the bonus section in the Prework, refer to the lesson "Install Git and Create GitHub Account", that you will find there. Follow the guidelines given there. Additionally, you can use these resources: [Install git](https://git-scm.com/downloads), [Version control with git](http://swcarpentry.github.io/git-novice/)_)
 
