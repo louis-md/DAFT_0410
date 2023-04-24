@@ -1,0 +1,44 @@
+datasource db {
+    provider = "mysql"
+    url      = env("DATABASE_URL")
+}
+
+model Country {
+    name      Int         @id
+    CellValue CellValue[]
+}
+
+model Year {
+    value     Int         @id
+    CellValue CellValue[]
+}
+
+model CellValue {
+    id            Int          @id @default(autoincrement())
+    value         Float
+    countryName   Int
+    country       Country      @relation(fields: [countryName], references: [name])
+    yearValue     Int
+    year          Year         @relation(fields: [yearValue], references: [value])
+    inflationId   Int
+    inflation     Inflation    @relation(fields: [inflationId], references: [id])
+    Imports       Imports?     @relation(fields: [importsId], references: [id])
+    importsId     Int?
+    Expenditure   Expenditure? @relation(fields: [expenditureId], references: [id])
+    expenditureId Int?
+}
+
+model Inflation {
+    id        Int         @id @default(autoincrement())
+    CellValue CellValue[]
+}
+
+model Imports {
+    id        Int         @id @default(autoincrement())
+    CellValue CellValue[]
+}
+
+model Expenditure {
+    id        Int         @id @default(autoincrement())
+    CellValue CellValue[]
+}
