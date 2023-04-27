@@ -35,3 +35,9 @@ Upon completion, add your deliverables to git. Then commit git and push your bra
 [Pandas - data preparation] https://towardsdatascience.com/essential-commands-for-data-preparation-with-pandas-ed01579cf214
 
 [Pandas] https://realpython.com/python-data-cleaning-numpy-pandas/
+
+# PLAN
+
+- Find and remove duplicates (if any)
+- Find and remove outliers (if any)
+- Find and remove NAs (if any)
