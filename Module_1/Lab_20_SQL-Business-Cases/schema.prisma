@@ -1,0 +1,44 @@
+datasource db {
+    provider = "mysql"
+    url      = env("DATABASE_URL")
+}
+
+model Car {
+    vin          String    @id @default(cuid())
+    manufacturer String
+    model        String
+    year         Int
+    color        String
+    invoices     Invoice[]
+}
+
+model Customer {
+    id            String    @id @default(cuid())
+    name          String
+    phone         String
+    email         String
+    address       String
+    city          String
+    state         String
+    zip           String
+    country       String
+    salespersonId String
+    invoices      Invoice[]
+}
+
+model Salesperson {
+    id       String    @id @default(cuid())
+    name     String
+    store    String
+    invoices Invoice[]
+}
+
+model Invoice {
+    id            String      @id @default(cuid())
+    salespersonId String
+    salesperson   Salesperson @relation(fields: [salespersonId], references: [id])
+    customerId    String
+    customer      Customer    @relation(fields: [customerId], references: [id])
+    carId         String
+    car           Car         @relation(fields: [carId], references: [vin])
+}
