@@ -10,6 +10,8 @@ As a data expert you work at a car dealership company which sells new cars of va
 
 Using pen and paper, design a database to meet the minimal requirements of your boss. The minimal information to be recorded is described below:
 
+Do it using prisma
+
 1. **Cars** - e.g. the vehicle identification number (VIN), manufacturer, model, year, and color of the cars in your company's inventory.
 
 1. **Customers** - e.g. the customer ID, name, phone number, email, address, city, state/province, country, and zip/postal code of the customers.
@@ -28,6 +30,8 @@ Before solving this challenge, review your lesson about database structure and d
 * **What are the relations between these entities? Which relations are one-to-one vs one-to-many vs many-to-many?**
 
 Use pen and paper to create the design, take a picture with your phone and send the image to yourself. If you use software to create the database diagram, export in the image format (JPG or PNG). Either way, the image will be submitted as one of the deliverables.
+
+Do it using prisma-erd
 
 ## Challenge 2 - Create the Database and Tables
 
@@ -53,6 +57,8 @@ Use pen and paper to create the design, take a picture with your phone and send 
 	USE lab_mysql;
 	```
 
+	Do it using prisma migrate dev
+
 1. **Then following the `USE` statement, write all your `CREATE TABLE` statements.** You'll need one `CREATE TABLE` statement for each table you decide to create. Make sure to end each statement with a semicolon. 
 
 This `.sql` file will be one of your deliverables. A `.sql` file is often used by software/data engineers to automate database operations. For example, to execute all the commands in the `create.sql` file, you can simply execute `source create.sql;` in MySQL command line. Many programming languages such as Python and PHP can also execute `.sql` files.
@@ -64,6 +70,8 @@ The purpose of *database seeding* is to provide some dummy data for an empty dat
 You'll be using the `INSERT INTO` statement for this purpose. A tutorial you can refer to can be fine [here](https://dev.mysql.com/doc/refman/8.0/en/insert.html).
 
 For your convenience, we provide you some example dummy data. These dummy data may not readily work with your database depending on how you have designed your database. You may need to change them to the appropriate form.
+
+Do it using prisma seed script
 
 ### Cars
 
